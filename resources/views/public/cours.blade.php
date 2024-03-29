@@ -93,9 +93,9 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid" src="{{ asset('pub/img/course-1.jpg') }}" alt="">
                                 <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                    <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                    <a href="{{ route('cours.voir', ['id' => $cours['id']]) }}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
                                         style="border-radius: 30px 0 0 30px;">Lire Plus</a>
-                                    <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                                    <a href="{{ route('souscrire') }}" class="flex-shrink-0 btn btn-sm btn-primary px-3"
                                         style="border-radius: 0 30px 30px 0;">Souscrire</a>
                                 </div>
                             </div>

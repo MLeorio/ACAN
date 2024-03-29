@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, "index"])->name('home');
 Route::get('/cours', [HomeController::class, "cours"])->name('cours');
+Route::get('/cours/{id}', [HomeController::class, "detail"])->name('cours.voir');
 Route::get('/contact', [HomeController::class, "contact"])->name('contact');
 
 
@@ -33,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('souscrire/{id}', [HomeController::class, 'souscrire'])->name('souscrire');
 });
 
 require_once __DIR__ . '/auth.php';
