@@ -22,13 +22,11 @@ Route::get('/cours', [HomeController::class, "cours"])->name('cours');
 Route::get('/contact', [HomeController::class, "contact"])->name('contact');
 
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::prefix('eleve')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('eleve')->group(function () {
         Route::get('/', [CustomerController::class, 'index'])->name('dashboard');
         Route::get('/mes_cours', [CustomerController::class, 'cours'])->name('mes_cours');
         Route::get('/mes_cours/{id}', [CustomerController::class, 'detail'])->name('detail');
         Route::get('/mes_cours/{cour}/{id}', [CustomerController::class, 'chapitre'])->name('chapitre');
-    });
 });
 
 Route::middleware('auth')->group(function () {
