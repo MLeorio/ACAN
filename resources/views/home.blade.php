@@ -53,12 +53,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-<<<<<<< HEAD
                 <a href="{{ route('home') }}" class="nav-item nav-link {{ Route::is('') ? 'active' : '' }} ">Accueil</a>
-=======
-                <a href="{{ route('home') }}"
-                    class="nav-item nav-link {{ Route::is('home') ? 'active' : '' }} ">Accueil</a>
->>>>>>> 161317bcfb13f078ce0abdae879be790ab861ca6
                 {{-- <a href="about.html" class="nav-item nav-link">About</a> --}}
                 <a href="{{ route('cours') }}"
                     class="nav-item nav-link {{ Route::is('cours') ? 'active' : '' }}">Cours</a>
@@ -79,10 +74,6 @@
                     @endif
                 @endauth
             @endif
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> 161317bcfb13f078ce0abdae879be790ab861ca6
         </div>
     </nav>
     <!-- Navbar End -->
